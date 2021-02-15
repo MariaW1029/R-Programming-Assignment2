@@ -1,3 +1,5 @@
+##This project is to cache the inverse of a matrix
+##makeCacheMatrix consists of set, get, setinverse, and getinverse
 makeCacheMatrix <- function(x = matrix()) {
     inv <- NULL
     set <- function(y) {
@@ -10,6 +12,7 @@ makeCacheMatrix <- function(x = matrix()) {
     list(set=set, get=get, setinverse=setinverse, getinverse=getinverse)
 }
 
+##This part is to get the cache data
 cacheSolve <- function(x, ...) {
     inv <- x$getinverse()
     if(!is.null(inv)) {
